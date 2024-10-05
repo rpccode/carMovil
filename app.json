@@ -3,6 +3,9 @@
     "name": "carMovil",
     "slug": "carMovil",
     "version": "1.0.0",
+    "description": "Aplicación móvil para administrar un auto",
+    "author": "Rudy",
+    "scheme": "carApp",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,7 +24,18 @@
       }
     },
     "web": {
+      "bundler": "metro", 
+      "output":"",
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],"experiments": {
+      "typedRoutes": true
     }
+    
+    
+    
+
   }
 }
