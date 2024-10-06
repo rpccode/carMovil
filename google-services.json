@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "307482403662",
+    "project_id": "nestjs-notificaciones-push",
+    "storage_bucket": "nestjs-notificaciones-push.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307482403662:android:1bb8ed03291f0c40f1f41f",
+        "android_client_info": {
+          "package_name": "com.carmovil.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvCESDiBwAbe-Dqpb14YglaXje2IQWnD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

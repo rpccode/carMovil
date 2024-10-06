@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 
 interface CustomHeaderProps {
   title: string;
@@ -30,6 +31,7 @@ const Header: React.FC<CustomHeaderProps> = ({
 }) => {
   const insets = useSafeAreaInsets();
   const animatedValue = useRef(new Animated.Value(0)).current;
+  const router = useRouter()
 
   useEffect(() => {
     Animated.timing(animatedValue, {
@@ -86,6 +88,10 @@ const Header: React.FC<CustomHeaderProps> = ({
         >
           {title}
         </Animated.Text>
+        <TouchableOpacity onPress={() => router.push('/(views)/notification')} style={styles.alerIcon}>
+           <Ionicons name={'notifications-circle-outline'} size={24} color="#FFFFFF" />
+
+          </TouchableOpacity>
         {rightIcon && (
           <TouchableOpacity onPress={onRightIconPress} style={styles.rightIcon}>
            <Ionicons name={'log-out-outline'} size={24} color="#FFFFFF" />
@@ -133,6 +139,11 @@ const styles = StyleSheet.create({
   rightIcon: {
     position: 'absolute',
     right: 16,
+    top: 18,
+  },
+  alerIcon: {
+    position: 'absolute',
+    right: 70,
     top: 18,
   },
 });

@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "carMovil",
-    "slug": "carMovil",
+    "slug": "card-movil-app",
     "version": "1.0.0",
     "description": "Aplicación móvil para administrar un auto",
     "author": "Rudy",
@@ -9,33 +9,49 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "extra": {
+      "expoProjectId": "2d6fb29f-c2b3-4773-9d6e-f10c7db9318c",
+      "apiUrl": "http://<TU-IP>:3000",
+      "eas": {
+        "projectId": "2d6fb29f-c2b3-4773-9d6e-f10c7db9318c"
+      }
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "fetch",
+          "remote-notification"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "permissions": [
+          "NOTIFICATIONS"
+        ],
+        "googleServicesFile": "./google-services.json",
+        "useNextNotificationsApi": true
       }
     },
     "web": {
-      "bundler": "metro", 
-      "output":"",
+      "bundler": "metro",
+      "output": "",
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router"
-    ],"experiments": {
+    ],
+    "experiments": {
       "typedRoutes": true
-    }
-    
-    
-    
-
+    },
+    "owner": "rpccode"
   }
 }
